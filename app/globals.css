@@ -44,8 +44,8 @@ h1, h2, h3, nav a {
 .menu a {
   color: #94C570;
   text-decoration: none;
-  font-size: 1rem;
-  transition: 0.2s ease;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
 }
 
 .menu a:hover {
