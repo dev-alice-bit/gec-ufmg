@@ -1,17 +1,30 @@
+"use client";
+import { useEffect, useState } from "react";
+
+const slides = [
+  "/slide1.jpg",
+  "/slide2.jpg",
+  "/slide3.jpg",
+];
+
 export default function Home() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
-      {/* Hero */}
-      <section className="hero">
-        <div className="hero-overlay">
-          <h1>Grêmio de Engenharia Civil UFMG</h1>
-          <p>
-            Representando e fortalecendo os estudantes de Engenharia Civil.
-          </p>
-        </div>
-      </section>
+      <section
+        className="slider"
+        style={{ backgroundImage: `url(${slides[current]})` }}
+      ></section>
 
-      {/* Seção Sobre */}
       <section className="sobre">
         <div className="container">
           <h2>Sobre o GEC</h2>
