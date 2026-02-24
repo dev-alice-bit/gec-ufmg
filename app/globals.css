@@ -56,3 +56,52 @@ h1, h2, h3, nav a {
 main {
   width: 100%;
 }
+
+/* Container padrão */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HERO */
+
+.hero {
+  background-image: url('/engenharia.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(10, 53, 3, 0.75);
+  padding: 50px 80px;
+  border-radius: 12px;
+  text-align: center;
+  color: #F5F2EC;
+}
+
+.hero-overlay h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+}
+
+/* SOBRE */
+
+.sobre {
+  padding: 80px 40px;
+  background-color: #F5F2EC;
+  color: #0A3503;
+}
+
+.sobre h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
