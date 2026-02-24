@@ -34,17 +34,23 @@ export default function RootLayout({
       GRÊMIO DE ENGENHARIA CIVIL
     </h1>
 
-    <nav className="menu">
-      <a href="/">Início</a>
-      <a href="/sobre">Sobre</a>
-      <a href="/disciplinas">Disciplinas</a>
-      <a href="/eventos">Eventos</a>
+   <nav className="menu">
+  <a href="/">Início</a>
+  <a href="/sobre">Sobre</a>
+  <a href="/alunos">Alunos</a>
+  <a href="/disciplinas">Disciplinas</a>
+  <a href="/eventos">Eventos</a>
+
+  <div className="dropdown">
+    <span className="dropdown-trigger">Mais ▾</span>
+    <div className="dropdown-menu">
       <a href="/noticias">Notícias</a>
       <a href="/gestao">Gestão</a>
-      <a href="/alunos">Alunos</a>
       <a href="/colegiado">Colegiado</a>
       <a href="/contato">Contato</a>
-    </nav>
+    </div>
+  </div>
+</nav>
   </div>
 </header>
 
