@@ -27,24 +27,26 @@ export default function RootLayout({
     <html lang="pt-br" className={`${bungee.variable} ${cabin.variable}`}>
       <body>
         <header className="header">
-          <div className="header-container">
-            <div className="logo-area">
-              <img src="/logo.png" alt="Logo GEC" className="logo" />
-            </div>
+  <div className="header-container">
+    <img src="/logo-gec.png" alt="Logo GEC" className="logo" />
 
-<nav className="menu">
-  <a href="/">Início</a>
-  <a href="/sobre">Sobre</a>
-  <a href="/disciplinas">Disciplinas</a>
-  <a href="/eventos">Eventos</a>
-  <a href="/noticias">Notícias</a>
-  <a href="/gestao">Gestão</a>
-  <a href="/alunos">Alunos</a>
-  <a href="/colegiado">Colegiado</a>
-  <a href="/contato">Contato</a>
-</nav>
-          </div>
-        </header>
+    <h1 className="site-title">
+      GRÊMIO DE ENGENHARIA CIVIL UFMG
+    </h1>
+
+    <nav className="menu">
+      <a href="/">Início</a>
+      <a href="/sobre">Sobre</a>
+      <a href="/disciplinas">Disciplinas</a>
+      <a href="/eventos">Eventos</a>
+      <a href="/noticias">Notícias</a>
+      <a href="/gestao">Gestão</a>
+      <a href="/alunos">Alunos</a>
+      <a href="/colegiado">Colegiado</a>
+      <a href="/contato">Contato</a>
+    </nav>
+  </div>
+</header>
 
         <main>{children}</main>
       </body>
