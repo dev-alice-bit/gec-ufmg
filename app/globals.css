@@ -38,18 +38,33 @@ h1, h2, h3, nav a {
 /* MENU */
 .menu {
   display: flex;
-  gap: 40px;
+  gap: 32px;
 }
 
 .menu a {
-  color: #94C570;
+  position: relative;
   text-decoration: none;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
+  color: #F5F2EC;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
 }
 
+/* Linha branca fina decorativa */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background-color: #F5F2EC;
+  opacity: 0.6;
+}
+
+/* Hover */
 .menu a:hover {
-  color: #F5F2EC;
+  color: #94C570;
 }
 
 /* MAIN */
