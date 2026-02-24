@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,35 +6,39 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f6f8;
-  color: #333;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #F5F2EC;
+  color: #0A3503;
 }
 
-/* Cabeçalho */
+/* HEADER */
 header {
-  background-color: #002147; /* azul escuro */
-  color: white;
+  background-color: #0A3503;
+  color: #F5F2EC;
+  padding: 20px 40px;
 }
 
 header h2 {
-  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+nav {
+  margin-top: 10px;
 }
 
 nav a {
-  color: white;
+  color: #94C570;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  margin-right: 20px;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #F5F2EC;
 }
 
+/* CONTEÚDO */
 main {
-  max-width: 900px;
-  margin: 40px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
+  max-width: 1200px;
+  margin: auto;
 }
