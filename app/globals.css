@@ -159,3 +159,28 @@ main {
   inset: 0;
   background-color: rgba(10, 53, 3, 0.6);
 }
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-trigger {
+  cursor: pointer;
+  color: #F5F2EC;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: #0A3503;
+  padding: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 6px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
