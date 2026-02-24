@@ -35,10 +35,12 @@ export default function RootLayout({
 <nav className="menu">
   <a href="/">Início</a>
   <a href="/sobre">Sobre</a>
-  <a href="/projetos">Projetos</a>
+  <a href="/disciplinas">Disciplinas</a>
   <a href="/eventos">Eventos</a>
   <a href="/noticias">Notícias</a>
   <a href="/gestao">Gestão</a>
+  <a href="/alunos">Alunos</a>
+  <a href="/colegiado">Colegiado</a>
   <a href="/contato">Contato</a>
 </nav>
           </div>
