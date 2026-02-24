@@ -236,3 +236,24 @@ main {
 .dropdown:hover .dropdown-menu {
   display: flex;
 }
+
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .slider {
+    height: 300px;
+  }
+
+  .site-title {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
