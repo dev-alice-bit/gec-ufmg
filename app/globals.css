@@ -54,6 +54,5 @@ h1, h2, h3, nav a {
 
 /* MAIN */
 main {
-  max-width: 1200px;
-  margin: auto;
+  width: 100%;
 }
