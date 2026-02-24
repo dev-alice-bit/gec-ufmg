@@ -32,11 +32,15 @@ export default function RootLayout({
               <img src="/logo.png" alt="Logo GEC" className="logo" />
             </div>
 
-            <nav className="menu">
-              <Link href="/">Home</Link>
-              <Link href="/sobre">Sobre</Link>
-              <Link href="/contato">Contato</Link>
-            </nav>
+<nav className="menu">
+  <a href="/">Início</a>
+  <a href="/sobre">Sobre</a>
+  <a href="/projetos">Projetos</a>
+  <a href="/eventos">Eventos</a>
+  <a href="/noticias">Notícias</a>
+  <a href="/gestao">Gestão</a>
+  <a href="/contato">Contato</a>
+</nav>
           </div>
         </header>
 
