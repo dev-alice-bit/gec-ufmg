@@ -145,19 +145,71 @@ main {
 }
 
 .slider {
+  position: relative;
   height: 420px;
   width: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: background-image 1s ease-in-out;
-  position: relative;
+  overflow: hidden;
 }
 
-.slider::before {
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(10, 53, 3, 0.6);
+  background-color: rgba(10, 53, 3, 0.5);
+}
+
+/* Botões */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(10, 53, 3, 0.6);
+  color: #F5F2EC;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Indicadores */
+.indicators {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #F5F2EC;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.dot.active {
+  opacity: 1;
+  background: #94C570;
 }
 
 .dropdown {
