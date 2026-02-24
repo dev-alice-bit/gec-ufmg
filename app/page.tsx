@@ -2,9 +2,9 @@
 import { useEffect, useState } from "react";
 
 const slides = [
-  "/slide1.jpg",
-  "/slide2.jpg",
-  "/slide3.jpg",
+  { image: "/slide1.jpg", link: "/alunos" },
+  { image: "/slide2.jpg", link: "/disciplinas" },
+  { image: "/slide3.jpg", link: "https://instagram.com/gec.ufmg" },
 ];
 
 export default function Home() {
@@ -12,27 +12,45 @@ export default function Home() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
+      nextSlide();
+    }, 6000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [current]);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) =>
+      prev === 0 ? slides.length - 1 : prev - 1
+    );
+  };
 
   return (
     <>
-      <section
-        className="slider"
-        style={{ backgroundImage: `url(${slides[current]})` }}
-      ></section>
+      <section className="slider">
+        {slides.map((slide, index) => (
+          <a
+            key={index}
+            href={slide.link}
+            className={`slide ${index === current ? "active" : ""}`}
+            style={{ backgroundImage: `url(${slide.image})` }}
+          />
+        ))}
 
-      <section className="sobre">
-        <div className="container">
-          <h2>Sobre o GEC</h2>
-          <p>
-            O Grêmio de Engenharia Civil atua na representação estudantil,
-            promovendo eventos acadêmicos, integração e fortalecimento
-            da comunidade universitária.
-          </p>
+        <button className="prev" onClick={prevSlide}>‹</button>
+        <button className="next" onClick={nextSlide}>›</button>
+
+        <div className="indicators">
+          {slides.map((_, index) => (
+            <span
+              key={index}
+              className={index === current ? "dot active" : "dot"}
+              onClick={() => setCurrent(index)}
+            />
+          ))}
         </div>
       </section>
     </>
