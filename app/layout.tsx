@@ -10,7 +10,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body>
         <header style={{ padding: "20px", borderBottom: "1px solid #ccc" }}>
-          <h2>Escola de Engenharia UFMG</h2>
+          <h2>Grêmio de Engenharia Civil UFMG</h2>
           <nav style={{ marginTop: "10px" }}>
             <Link href="/" style={{ marginRight: "15px" }}>Home</Link>
             <Link href="/sobre" style={{ marginRight: "15px" }}>Sobre</Link>
