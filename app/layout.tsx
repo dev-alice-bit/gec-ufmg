@@ -1,10 +1,16 @@
 import "./globals.css";
 import Link from "next/link";
-import { Bungee } from "next/font/google";
+import { Bungee, Cabin } from "next/font/google";
 
 const bungee = Bungee({
   subsets: ["latin"],
   weight: "400",
+  variable: "--font-bungee",
+});
+
+const cabin = Cabin({
+  subsets: ["latin"],
+  variable: "--font-cabin",
 });
 
 export const metadata = {
@@ -18,20 +24,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" className={`${bungee.variable} ${cabin.variable}`}>
       <body>
         <header className="header">
           <div className="header-container">
-            {/* Logo + Nome */}
             <div className="logo-area">
               <img src="/logo.png" alt="Logo GEC" className="logo" />
-              <span className={`${bungee.className} site-title`}>
-                Grêmio de Engenharia Civil UFMG
-              </span>
             </div>
 
-            {/* Menu */}
-            <nav className={bungee.className}>
+            <nav className="menu">
               <Link href="/">Home</Link>
               <Link href="/sobre">Sobre</Link>
               <Link href="/contato">Contato</Link>
