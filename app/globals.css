@@ -29,10 +29,6 @@ h1, h2, h3, nav a {
   justify-content: space-between;
 }
 
-.logo {
-  height: 60px;
-}
-
 .site-title {
   color: #F5F2EC;
   font-size: 1rem;
@@ -45,6 +41,7 @@ h1, h2, h3, nav a {
 .logo {
   height: 70px;   /* controla o tamanho */
   width: auto;
+  display: block;
 }
 
 /* MENU */
