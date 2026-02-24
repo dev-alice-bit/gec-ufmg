@@ -1,10 +1,16 @@
+import "./globals.css";
+import Link from "next/link";
 import { Bungee } from "next/font/google";
+
 const bungee = Bungee({
   subsets: ["latin"],
   weight: "400",
 });
-import Link from "next/link";
-import "./globals.css";
+
+export const metadata = {
+  title: "Grêmio de Engenharia Civil UFMG",
+  description: "Site oficial do GEC - UFMG",
+};
 
 export default function RootLayout({
   children,
@@ -14,18 +20,26 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-        <header style={{ padding: "20px", borderBottom: "1px solid #ccc" }}>
-          <h2>Grêmio de Engenharia Civil UFMG</h2>
-          <nav style={{ marginTop: "10px" }}>
-            <Link href="/" style={{ marginRight: "15px" }}>Home</Link>
-            <Link href="/sobre" style={{ marginRight: "15px" }}>Sobre</Link>
-            <Link href="/contato">Contato</Link>
-          </nav>
+        <header className="header">
+          <div className="header-container">
+            {/* Logo + Nome */}
+            <div className="logo-area">
+              <img src="/logo.png" alt="Logo GEC" className="logo" />
+              <span className={`${bungee.className} site-title`}>
+                Grêmio de Engenharia Civil UFMG
+              </span>
+            </div>
+
+            {/* Menu */}
+            <nav className={bungee.className}>
+              <Link href="/">Home</Link>
+              <Link href="/sobre">Sobre</Link>
+              <Link href="/contato">Contato</Link>
+            </nav>
+          </div>
         </header>
 
-        <main style={{ padding: "20px" }}>
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );
