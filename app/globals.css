@@ -1,20 +1,26 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* TIPOGRAFIA GLOBAL */
 body {
   background-color: #F5F2EC;
   color: #0A3503;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-cabin);
+}
+
+/* TÍTULOS */
+h1, h2, h3, nav a {
+  font-family: var(--font-bungee);
 }
 
 /* HEADER */
 .header {
   background-color: #0A3503;
-  padding: 20px 40px;
+  padding: 15px 40px;
 }
 
 .header-container {
@@ -23,34 +29,26 @@ body {
   justify-content: space-between;
 }
 
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
+/* LOGO */
 .logo {
-  height: 50px;
+  height: 70px;   /* controla o tamanho */
+  width: auto;
 }
 
-.site-title {
-  color: #F5F2EC;
-  font-size: 1.3rem;
-}
-
-nav {
+/* MENU */
+.menu {
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 
-nav a {
+.menu a {
   color: #94C570;
   text-decoration: none;
   font-size: 1rem;
   transition: 0.2s ease;
 }
 
-nav a:hover {
+.menu a:hover {
   color: #F5F2EC;
 }
 
