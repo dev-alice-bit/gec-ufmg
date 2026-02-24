@@ -143,3 +143,19 @@ main {
   font-size: 2rem;
   margin-bottom: 20px;
 }
+
+.slider {
+  height: 420px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  position: relative;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(10, 53, 3, 0.6);
+}
