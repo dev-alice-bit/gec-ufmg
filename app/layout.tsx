@@ -30,11 +30,12 @@ export default function RootLayout({
       <body>
         <header className="header">
           <div className="header-container">
-            <img src="/logo-gec.png" alt="Logo GEC" className="logo" />
-
-            <h1 className="site-title">
-              GRÊMIO DE ENGENHARIA CIVIL
-            </h1>
+            <div className="brand">
+              <img src="/logo-gec.png" alt="Logo GEC" className="logo" />
+              <h1 className="site-title">
+                GRÊMIO DE ENGENHARIA CIVIL
+              </h1>
+            </div>
 
             <nav className="menu">
               <a href="/">Início</a>
