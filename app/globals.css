@@ -263,3 +263,17 @@ main {
     height: 240px;
   }
 }
+
+.header {
+  position: relative;
+  z-index: 1000;
+}
+
+.dropdown-menu {
+  z-index: 2000;
+}
+
+.slider {
+  position: relative;
+  z-index: 1;
+}
