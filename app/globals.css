@@ -197,21 +197,11 @@ main {
   position: relative;
 }
 
-/* Link "Mais" */
-.dropdown > a {
-  font-family: inherit;
-  font-size: inherit;
-  color: #F5F2EC;
-  text-decoration: none;
-  padding: 8px 12px;
-  display: block;
-}
-
 /* Menu escondido */
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 100%;   /* fica logo abaixo */
   left: 0;
   background-color: #1E3A2F;
   list-style: none;
@@ -219,27 +209,33 @@ main {
   margin: 0;
   min-width: 180px;
   border-radius: 6px;
-  overflow: hidden;
   z-index: 9999;
+
+  /* 🔥 ISSO RESOLVE ABRIR PARA BAIXO */
+  display: none;
+  flex-direction: column;
 }
 
-/* Mostrar menu quando passar o mouse no bloco inteiro */
+/* Mostrar menu */
 .dropdown:hover .dropdown-menu {
-  display: block;
+  display: flex;  /* agora abre vertical */
 }
 
-/* Links internos */
+/* Garantir que os itens fiquem um abaixo do outro */
+.dropdown-menu li {
+  display: block;
+  width: 100%;
+}
+
 .dropdown-menu li a {
   display: block;
   padding: 10px 15px;
   font-family: inherit;
-  font-size: 0.95rem;
   color: #F5F2EC;
   text-decoration: none;
   background-color: #1E3A2F;
 }
 
-/* Hover dos itens */
 .dropdown-menu li a:hover {
   background-color: #2F5D4E;
   color: #A8D5BA;
