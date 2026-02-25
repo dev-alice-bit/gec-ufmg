@@ -13,7 +13,13 @@ body {
 }
 
 /* TÍTULOS */
-h1, h2, h3, nav a {
+h1, h2, h3 {
+  font-family: var(--font-bungee);
+}
+
+.menu a,
+.dropdown-trigger,
+.dropdown-menu a {
   font-family: var(--font-bungee);
 }
 
