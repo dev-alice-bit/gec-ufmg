@@ -15,8 +15,9 @@ const cabin = Cabin({
 
 export const metadata = {
   title: "Grêmio de Engenharia Civil",
-  description: "Site oficial do GEC - UFMG",
-};
+  icons: {
+    icon: "/favicon.ico",
+  },
 
 export default function RootLayout({
   children,
