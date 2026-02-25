@@ -202,43 +202,36 @@ main {
   position: relative;
 }
 
-/* Menu escondido */
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;   /* fica logo abaixo */
+  top: 100%;
   left: 0;
   background-color: #1E3A2F;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  min-width: 180px;
-  border-radius: 6px;
+  padding: 10px 0;   /* 🔥 espaço interno vertical */
+  margin: 8px 0 0 0; /* 🔥 pequeno afastamento do botão */
+  min-width: 200px;
+  border-radius: 8px;
   z-index: 9999;
-
-  /* 🔥 ISSO RESOLVE ABRIR PARA BAIXO */
-  display: none;
   flex-direction: column;
 }
 
-/* Mostrar menu */
 .dropdown:hover .dropdown-menu {
-  display: flex;  /* agora abre vertical */
+  display: flex;
 }
 
-/* Garantir que os itens fiquem um abaixo do outro */
 .dropdown-menu li {
-  display: block;
   width: 100%;
 }
 
 .dropdown-menu li a {
   display: block;
-  padding: 10px 15px;
+  padding: 12px 20px;  /* 🔥 mais respiro lateral */
   font-family: inherit;
   color: #F5F2EC;
   text-decoration: none;
-  background-color: #1E3A2F;
+  transition: background 0.2s ease;
 }
 
 .dropdown-menu li a:hover {
