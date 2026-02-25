@@ -1,5 +1,4 @@
 import "./globals.css";
-import Link from "next/link";
 import { Bungee, Cabin } from "next/font/google";
 
 const bungee = Bungee({
@@ -15,9 +14,11 @@ const cabin = Cabin({
 
 export const metadata = {
   title: "Grêmio de Engenharia Civil",
+  description: "Site oficial do Grêmio de Engenharia Civil da UFMG",
   icons: {
     icon: "/favicon.ico",
   },
+};
 
 export default function RootLayout({
   children,
@@ -28,32 +29,32 @@ export default function RootLayout({
     <html lang="pt-br" className={`${bungee.variable} ${cabin.variable}`}>
       <body>
         <header className="header">
-  <div className="header-container">
-    <img src="/logo-gec.png" alt="Logo GEC" className="logo" />
+          <div className="header-container">
+            <img src="/logo-gec.png" alt="Logo GEC" className="logo" />
 
-    <h1 className="site-title">
-      GRÊMIO DE ENGENHARIA CIVIL
-    </h1>
+            <h1 className="site-title">
+              GRÊMIO DE ENGENHARIA CIVIL
+            </h1>
 
-   <nav className="menu">
-  <a href="/">Início</a>
-  <a href="/sobre">Sobre</a>
-  <a href="/alunos">Alunos</a>
-  <a href="/disciplinas">Disciplinas</a>
-  <a href="/eventos">Eventos</a>
+            <nav className="menu">
+              <a href="/">Início</a>
+              <a href="/sobre">Sobre</a>
+              <a href="/alunos">Alunos</a>
+              <a href="/disciplinas">Disciplinas</a>
+              <a href="/eventos">Eventos</a>
 
-  <div className="dropdown">
-    <span className="dropdown-trigger">Mais ▾</span>
-    <div className="dropdown-menu">
-      <a href="/noticias">Notícias</a>
-      <a href="/gestao">Gestão</a>
-      <a href="/colegiado">Colegiado</a>
-      <a href="/contato">Contato</a>
-    </div>
-  </div>
-</nav>
-  </div>
-</header>
+              <div className="dropdown">
+                <span className="dropdown-trigger">Mais ▾</span>
+                <div className="dropdown-menu">
+                  <a href="/noticias">Notícias</a>
+                  <a href="/gestao">Gestão</a>
+                  <a href="/colegiado">Colegiado</a>
+                  <a href="/contato">Contato</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
 
         <main>{children}</main>
       </body>
