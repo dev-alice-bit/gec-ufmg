@@ -23,31 +23,36 @@ h1, h2, h3 {
   font-family: var(--font-bungee);
 }
 
-/* HEADER */
-.header {
-  background-color: #0A3503;
-  padding: 15px 40px;
-}
+/* ===== HEADER ===== */
 
-.header-container {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+header {
+  background-color: #1E3A2F;
+  padding: 10px 40px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-/* LOGO */
+/* Container da esquerda (logo + título) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;   /* espaço pequeno entre logo e texto */
+}
+
+/* Logo */
 .logo {
   height: 70px;
   width: auto;
   display: block;
 }
 
-/* TÍTULO */
+/* Título */
 .site-title {
   color: #F5F2EC;
-  font-size: 1rem;
+  font-size: 1.1rem;
   letter-spacing: 1.5px;
-  text-align: center;
+  margin: 0;
 }
 
 /* MENU */
