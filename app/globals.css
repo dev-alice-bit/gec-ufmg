@@ -26,7 +26,7 @@ h1, h2, h3 {
 /* ===== HEADER ===== */
 
 header.header {
-  background-color: #1E3A2F !important;
+  background-color: #0A3503 !important;
   padding: 10px 40px;
   position: relative;
   z-index: 1000;
@@ -117,7 +117,7 @@ header.header {
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
-  background-color: #1E3A2F;
+  background-color: #0A3503;
   min-width: 220px;
   border-radius: 10px;
   padding: 12px 0;
