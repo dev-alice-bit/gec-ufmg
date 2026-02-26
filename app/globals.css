@@ -115,7 +115,7 @@ header.header {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 0;
   background-color: #0A3503;
   min-width: 220px;
