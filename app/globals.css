@@ -25,8 +25,8 @@ h1, h2, h3 {
 
 /* ===== HEADER ===== */
 
-.header {
-  background-color: #1E3A2F;
+header.header {
+  background-color: #1E3A2F !important;
   padding: 10px 40px;
   position: relative;
   z-index: 1000;
